@@ -1,11 +1,11 @@
-import React from 'react'
-import Affair from './Affair'
-import {AffairType} from './HW2'
+import React from 'react';
+import Affair from './Affair';
+import {AffairType, FilterType} from './HW2';
 
 type AffairsPropsType = { // need to fix any
-    data: any
-    setFilter: any
-    deleteAffairCallback: any
+    data: AffairType[]
+    setFilter: (filter: FilterType) => void
+    deleteAffairCallback: (_id: number) => void
 }
 
 function Affairs(props: AffairsPropsType) {
@@ -15,12 +15,20 @@ function Affairs(props: AffairsPropsType) {
             affair={a}
             deleteAffairCallback={props.deleteAffairCallback}
         />
-    ))
+    ));
 
-    const setAll = () => {} // need to fix
-    const setHigh = () => {}
-    const setMiddle = () => {}
-    const setLow = () => {}
+    const setAll = () => {
+        props.setFilter('all');
+    };
+    const setHigh = () => {
+        props.setFilter('high');
+    };
+    const setMiddle = () => {
+        props.setFilter('middle');
+    };
+    const setLow = () => {
+        props.setFilter('low');
+    };
 
     return (
         <div>
@@ -32,7 +40,7 @@ function Affairs(props: AffairsPropsType) {
             <button onClick={setMiddle}>Middle</button>
             <button onClick={setLow}>Low</button>
         </div>
-    )
-}
+    );
+};
 
-export default Affairs
+export default Affairs;
