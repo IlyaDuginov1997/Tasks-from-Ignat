@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {homeWorkReducer, Sort18Age, SortByNameAC, SortDownAC, SortUpAC} from './bll/homeWorkReducer';
+import {homeWorkReducerTest, Sort18Age, SortByNameAC, SortDownAC, SortUpAC} from './bll/homeWorkReducer';
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton';
 import styles from './HW8.module.css';
 
@@ -32,10 +32,10 @@ function HW8() {
         </div>
     ));
 
-    const sortUp = () => setPeople(homeWorkReducer(initialPeople, SortUpAC('up')));
-    const sortDown = () => setPeople(homeWorkReducer(initialPeople, SortDownAC('down')));
-    const sortAge18 = () => setPeople(homeWorkReducer(initialPeople, Sort18Age(18)));
-    const sortByName = () => setPeople(homeWorkReducer(initialPeople, SortByNameAC('name')));
+    const sortUp = () => setPeople(homeWorkReducerTest(initialPeople, SortUpAC('up')));
+    const sortDown = () => setPeople(homeWorkReducerTest(initialPeople, SortDownAC('down')));
+    const sortAge18 = () => setPeople(homeWorkReducerTest(initialPeople, Sort18Age(18)));
+    const sortByName = () => setPeople(homeWorkReducerTest(initialPeople, SortByNameAC('name')));
 
     return (
         <div>

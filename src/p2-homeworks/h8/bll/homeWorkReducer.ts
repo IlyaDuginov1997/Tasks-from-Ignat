@@ -14,7 +14,7 @@ const initialPeople: UserType[] = [
     {_id: 5, name: 'Ирина', age: 55},
 ];
 
-export const homeWorkReducer = (state: UserType[] = initialPeople, action: AllReducerType): UserType[] => { // need to fix any
+export const homeWorkReducerTest = (state: UserType[] = initialPeople, action: AllReducerType): UserType[] => { // need to fix any
     switch (action.type) {
         case 'SORT-UP': {
             if (action.payload === 'up') {
