@@ -2,9 +2,15 @@ import React, {useState} from 'react';
 import Slider, {Range} from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import styles from './HW11.module.css';
+import {useSelector} from 'react-redux';
+import {AppStoreType} from '../h10/bll/store';
+import s from '../h12/HW12.module.css';
 
 
 function HW11() {
+
+    const theme = useSelector<AppStoreType, any>(state => state.themeReducer.theme)
+
     const [value1, setValue1] = useState(20);
     const [value2, setValue2] = useState(80);
 
@@ -21,14 +27,14 @@ function HW11() {
 
 
     return (
-        <div>
+        <div className={s[theme]}>
             <hr/>
 
             <div className={styles.mainContainer}>
 
                 homeworks 11
                 <span>{value1}</span>
-                <Slider
+                <Slider className={styles.sliderContainer}
                     onChange={onChangeSliderValue}
                     min={0}
                     max={100}
