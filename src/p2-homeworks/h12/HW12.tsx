@@ -8,7 +8,7 @@ import {changeThemeC, ThemeType} from './bll/themeReducer';
 const themes = ['dark', 'red', 'some'];
 
 function HW12() {
-    const theme = useSelector<AppStoreType, any>(state => state.themeReducer.theme)
+    const theme = useSelector<AppStoreType, ThemeType>(state => state.themeReducer.theme)
     const dispatch = useDispatch()
 
     const changeThemeCallback = (theme: ThemeType) => {

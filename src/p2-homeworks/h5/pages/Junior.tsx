@@ -8,10 +8,10 @@ import HW10 from '../../h10/HW10';
 function Junior() {
     return (
         <div>
-            <HW7/>
-            <HW8/>
-            <HW9/>
-            <HW10/>
+            {/*<HW7/>*/}
+            {/*<HW8/>*/}
+            {/*<HW9/>*/}
+            {/*<HW10/>*/}
             {/*<HW11/>*/}
         </div>
     )
