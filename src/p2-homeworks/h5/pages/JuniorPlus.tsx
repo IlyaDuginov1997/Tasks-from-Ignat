@@ -6,8 +6,8 @@ import HW13 from '../../h13/HW13';
 function JuniorPlus() {
     return (
         <div>
-            {/*<HW12/>*/}
-            {/*<HW13/>*/}
+            <HW12/>
+            <HW13/>
 
         </div>
     );
